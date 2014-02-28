@@ -4,6 +4,7 @@ blackArr = [{text: "_?  There's an app for that." },{text: "Why can't I sleep at
 if (WhiteCards.find().count() === 0) {
   for(var i = 0; i < whiteArr.length; i++) {
     whiteArr[i]["cardID"]=i;
+    whiteArr[i]["cardColor"]="white";
     WhiteCards.insert(whiteArr[i]);
   }
 }
@@ -11,6 +12,7 @@ if (WhiteCards.find().count() === 0) {
 if (BlackCards.find().count() === 0) {
   for (var i = 0; i < blackArr.length; i++) {
     blackArr[i]["cardID"]=i;
+    blackArr[i]["cardColor"]="black";
     BlackCards.insert(blackArr[i])
   }
 }
